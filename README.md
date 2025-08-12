@@ -119,9 +119,9 @@ docker stop ollama
 
 このプロジェクトの詳細な開発過程は以下の記事で記録しています：
 
-- [#1 LLMの仕組みを3つのレイヤーで整理してみた]
-- [#2 ローカルマシンの容量チェックとDocker環境の準備]
-- [#3 Phi4-miniの実行環境構築とカスタムプロンプト対応](./【学習ログ】ローカルでGPT%20OSSを動かす準備%20%233%20Phi4-miniの実行環境構築とカスタムプロンプト対応.md)
+- [#1 LLMの仕組みを3つのレイヤーで整理してみた](https://zenn.dev/atsushimemet/articles/272ed0ccdc1c1d)
+- [#2 ローカルマシンの容量チェックとDocker環境の準備](https://zenn.dev/atsushimemet/articles/e418f8af2e02a2)
+- [#3 Phi4-miniの実行環境構築とカスタムプロンプト対応](https://zenn.dev/atsushimemet/articles/bf9bf5423d4666)
 
 ## ライセンス
 
