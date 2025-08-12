@@ -1,3 +1,4 @@
+import sys
 import time
 
 import requests
@@ -29,6 +30,14 @@ def wait_for_ollama():
 def main():
     print("アプリケーションを開始します...")
 
+    # コマンドライン引数からプロンプトを取得
+    if len(sys.argv) > 1:
+        user_prompt = " ".join(sys.argv[1:])
+        print(f"ユーザープロンプト: {user_prompt}")
+    else:
+        user_prompt = "こんにちは！簡単な挨拶をしてください。"
+        print("デフォルトプロンプトを使用します")
+
     # Ollamaサーバーの準備を待機
     if not wait_for_ollama():
         print("Ollamaサーバーに接続できませんでした")
@@ -45,7 +54,7 @@ def main():
         response = client.chat.completions.create(
             model="phi4-mini",  # Phi4-miniモデルを使用
             messages=[
-                {"role": "user", "content": "こんにちは！簡単な挨拶をしてください。"}
+                {"role": "user", "content": user_prompt}
             ],
             max_tokens=100,
             temperature=0.7,
